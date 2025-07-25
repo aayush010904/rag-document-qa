@@ -71,10 +71,8 @@ def extract_text_from_email(email_path: str) -> str:
                 if body:
                     full_text.append(body)
             elif content_type == "text/html":
-                # Basic HTML stripping (you might want to use BeautifulSoup for better parsing)
                 html_body = part.get_content()
                 if html_body:
-                    # Simple HTML tag removal
                     import re
 
                     clean_text = re.sub(r"<[^>]+>", "", html_body)
@@ -88,8 +86,6 @@ def extract_text_from_email(email_path: str) -> str:
 
 
 def extract_text_from_document(file_path: str) -> str:
-    """Extract text from PDF, DOCX, or email files."""
-    # Determine file type by extension
     file_ext = file_path.lower().split(".")[-1]
 
     if file_ext == "pdf":
@@ -99,7 +95,6 @@ def extract_text_from_document(file_path: str) -> str:
     elif file_ext in ["eml", "msg", "email"]:
         return extract_text_from_email(file_path)
     else:
-        # Try to detect by content type
         mime_type, _ = mimetypes.guess_type(file_path)
         if mime_type:
             if "pdf" in mime_type:

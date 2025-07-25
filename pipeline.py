@@ -14,7 +14,7 @@ def get_file_extension_from_url(url: str) -> str:
     parsed = urlparse(url)
     path = parsed.path.lower()
 
-    # Check common document extensions
+   
     if ".pdf" in path:
         return ".pdf"
     elif ".docx" in path:
@@ -31,7 +31,6 @@ def get_file_extension_from_url(url: str) -> str:
 
 
 async def process_document_and_answer(blob_url: str, questions: List[str]) -> List[str]:
-    """Main processing pipeline for PDF, DOCX, and email documents."""
     # Download document
     response = requests.get(blob_url)
     if response.status_code != 200:

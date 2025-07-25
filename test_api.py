@@ -33,14 +33,11 @@ total_time = end_time - start_time
 
 if response.status_code == 200:
     answers = response.json().get("answers", [])
-    print("✅ Response:\n")
-    # for i, (q, a) in enumerate(zip(questions, answers), start=1):
-    #     print(f"Q{i}: {q}")
-    #     print(f"A{i}: {a}\n")
+    print("Response:\n")
     for i in answers:
         print(f"A -  {i}\n\n")
     print(f"Total Latency for {len(questions)} questions: {total_time:.2f} seconds")
     print(f"Average Latency per question: {total_time / len(questions):.2f} seconds")
 else:
-    print(f"❌ Error {response.status_code}:")
+    print(f"Error {response.status_code}:")
     print(response.text)

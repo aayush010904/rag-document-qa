@@ -16,7 +16,6 @@ An enterprise-grade, LLM-powered intelligent document analysis and question-answ
 
 ### **Backend Framework**
 
-- **FastAPI** `>=0.110.0` - Modern Python web framework with automatic API documentation
 - **Uvicorn** `>=0.27.1` - Lightning-fast ASGI server with standard features
 - **Pydantic** - Data validation and settings management using Python type annotations
 

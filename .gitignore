@@ -181,3 +181,8 @@ cython_debug/
 secrets/
 keys/
 credentials/
+
+# Custom virtual environments and backup files
+venv_new/
+backup_optimized_files/
+new_venv/

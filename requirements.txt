@@ -11,4 +11,4 @@ pdfplumber>=0.10.2
 python-dotenv>=1.0.0
 python-multipart>=0.0.6
 numpy>=1.24.0
-pinecone-client>=3.0.0
+pinecone>=2.0.0

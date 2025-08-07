@@ -1,4 +1,4 @@
-# HackRx Document QA System
+# Document QA System
 
 An enterprise-grade, LLM-powered intelligent document analysis and question-answering system built for HackRx competition. The system leverages advanced NLP, vector databases, and modern async frameworks to process multi-format documents and provide contextually accurate answers optimized for insurance, legal, HR, and compliance domains.
 
